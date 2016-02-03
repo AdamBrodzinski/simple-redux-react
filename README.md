@@ -11,13 +11,12 @@ This project doesn't solve all edge cases... for those you can wire it up yourse
 
 ## Configuration
 
-The most common cases are implied but can be overridden. Here is the minimal amount of code needed to get redux with a router:
+The most common cases are implied but can be overridden. Here is the ***minimal amount of code needed*** to get redux with a router:
 
 ```javascript
 import {registerRedux} from './simple-react-redux'
 
 export const {dispatch} = registerRedux({
-  debug: true,                  // conditionally remove dev tools & middleware in production
   routes: require('./routes'),  // pass in the `<ReduxRouter><Route.../></ReduxRouter>` component
   renderToElementId: 'root',    // where to render the router component
 });
@@ -25,7 +24,28 @@ export const {dispatch} = registerRedux({
 
 <br>
 
-### Customizing
+
+#### Common Use Case
+
+While the above snippet gets a router working and redux up, you'll need at least one reducer to do any real work.
+
+```javascript
+import {registerRedux} from './simple-react-redux'
+
+export const {dispatch} = registerRedux({
+  routes: require('./routes'),
+  renderToElementId: 'react-root',
+  reducers: {
+    app:   require('./reducers/app'),
+    posts: require('./reducers/posts'),
+  },
+});
+```
+
+
+<br>
+
+#### Customizing
 
 You'll want to add reducers and middleware at some point so you can add those as needed.
 
@@ -34,9 +54,13 @@ import {registerRedux} from 'simple-react-redux'
 
 export const {dispatch} = registerRedux({
   // default options are overridable
+  debug: false,                     // turns redux-devtools and logging on/off
   renderToElementId: 'react-root',
   disableLoggingMiddleware: false,
   disableDevTools: false,
+  
+  // pass in Routes component
+  routes: require('./routes'),
   
   // router reducer is already included, add more as needed
   reducers: {
@@ -48,9 +72,6 @@ export const {dispatch} = registerRedux({
   middleware: [
     myCustomMiddleware(),
   ],
-
-  // pass in Routes component
-  routes: require('./routes'),
 });
 ```
 
