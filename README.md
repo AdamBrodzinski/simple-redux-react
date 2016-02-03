@@ -2,7 +2,7 @@
 
 Getting the average app running with React, Redux, react-redux react-router-redux, is getting way too complicated. I'm glad that it's so flexible and customizable but all of my projects follow a similar pattern when getting things going.
 
-The project doesn't solve all edge cases... for those you wire it up yourself or submit a PR if you think this is missing a commong config.
+This project doesn't solve all edge cases... for those you can wire it up yourself or submit a PR if you think this is missing a commong config.
 
 
 ## Installation
@@ -17,8 +17,8 @@ The most common cases are implied but can be overridden. Here is the minimal amo
 import {registerRedux} from './simple-react-redux'
 
 export const {dispatch} = registerRedux({
-  debug: true,                  // conditionally flag to remove dev tools & middleware in prod
-  routes: require('./routes'),  // pass in the `<Router>` component
+  debug: true,                  // conditionally remove dev tools & middleware in production
+  routes: require('./routes'),  // pass in the `<ReduxRouter><Route.../></ReduxRouter>` component
   renderToElementId: 'root',    // where to render the router component
 });
 ```
