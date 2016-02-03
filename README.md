@@ -1,6 +1,6 @@
 # simple-redux-react
 
-Getting the average app running with React, Redux, react-redux react-router-redux, is getting way too complicated. I'm glad that it's so flexible and customizable but all of my projects follow a similar pattern when getting things going.
+Getting the average app running with React, Redux, react-redux, redux-devtools, and react-router-redux, is getting way too complicated. I'm glad that it's so flexible and customizable but all of my projects follow a similar pattern when getting things going.
 
 This project doesn't solve all edge cases... for those you can wire it up yourself or submit a PR if you think this is missing a commong config.
 
@@ -32,7 +32,7 @@ You'll want to add reducers and middleware at some point so you can add those as
 ```javascript
 import {registerRedux} from 'simple-react-redux'
 
-export const {store} = registerRedux({
+export const {dispatch} = registerRedux({
   // default options are overridable
   renderToElementId: 'react-root',
   disableLoggingMiddleware: false,
