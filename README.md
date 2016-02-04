@@ -13,19 +13,6 @@ This project doesn't solve all edge cases... for those you can wire it up yourse
 
 The most common cases are implied but can be overridden. Here is the ***minimal amount of code needed*** to get redux with a router:
 
-```javascript
-import {registerRedux} from './simple-react-redux'
-
-export const {dispatch} = registerRedux({
-  routes: require('./routes'),  // pass in the `<ReduxRouter><Route.../></ReduxRouter>` component
-  renderToElementId: 'root',    // where to render the router component
-});
-```
-
-<br>
-
-
-#### Common Use Case
 
 While the above snippet gets a router working and redux up, you'll need at least one reducer to do any real work.
 
