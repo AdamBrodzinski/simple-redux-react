@@ -11,7 +11,7 @@ This project doesn't solve all edge cases... for those you can wire it up yourse
 
 ## Configuration
 
-The most common cases are implied but can be overridden. Here is the ***minimal amount of code needed*** to get redux with a router:
+The most common cases are implied but can be overridden. Here's the most common case. The Redux dev tools and logger middlware are included by default (more can be added too, see customizing).
 
 
 While the above snippet gets a router working and redux up, you'll need at least one reducer to do any real work.
