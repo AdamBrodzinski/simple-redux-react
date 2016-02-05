@@ -4,6 +4,11 @@ Getting the average app running with React, Redux, react-redux, redux-devtools, 
 
 This project doesn't solve all edge cases... for those you can wire it up yourself or submit a PR if you think this is missing a commong config.
 
+- Wires up React, Redux & redux-router
+- Included Redux Dev Tools (only in devel/debug mode)
+- Includes Generic Logger
+- Config to opt-out of these features (react-router opt out for RN coming soon)
+
 
 ## Installation
 `npm install simple-redux-react`
@@ -41,10 +46,11 @@ import {registerRedux} from 'simple-react-redux'
 
 export const {dispatch} = registerRedux({
   // default options are overridable
-  debug: false,                     // turns redux-devtools and logging on/off
+  debug: false,                      // turns redux-devtools and logging on/off
   renderToElementId: 'react-root',
   disableLoggingMiddleware: false,
-  disableDevTools: false,
+  disableDevTools: false,            // turns off redux-devtools middleware
+  disableLogger: false,
   
   // pass in Routes component
   routes: require('./routes'),
