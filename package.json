@@ -1,0 +1,34 @@
+{
+  "name": "simple-react-redux",
+  "version": "1.0.0",
+  "description": "A simpler way to use react-router-redux",
+  "author": "Adam Brodzinski",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel --presets es2015,react,stage-2 -d lib/ src/",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamBrodzinski/simple-redux-react.git"
+  },
+  "keywords": [
+    "redux",
+    "react",
+    "redux-router",
+    "react-router",
+    "simple"
+  ],
+  "bugs": {
+    "url": "https://github.com/AdamBrodzinski/simple-redux-react/issues"
+  },
+  "homepage": "https://github.com/AdamBrodzinski/simple-redux-react#readme",
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0"
+  }
+}
