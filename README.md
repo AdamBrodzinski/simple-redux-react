@@ -11,7 +11,7 @@ This project doesn't solve all edge cases... for those you can wire it up yourse
 
 
 ## Installation
-`npm install simple-redux-react --save`
+`npm install --save simple-react-redux`
 
 
 ## Configuration
